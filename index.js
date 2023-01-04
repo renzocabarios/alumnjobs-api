@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import connectDB from "./app/db/index.js";
 import ENV from "./app/env/index.js";
-import { sampleRoute, announcementsRoute, jobPostingsRoute } from "./app/routes/v1/index.js";
+import { sampleRoute, announcementsRoute, jobPostingsRoute, jobsRoute } from "./app/routes/v1/index.js";
 
 const app = express();
 
@@ -15,6 +15,7 @@ app.use(cors());
 app.use("/api/v1/sample", sampleRoute);
 app.use("/api/v1/announcements", announcementsRoute);
 app.use("/api/v1/job-postings", jobPostingsRoute);
+app.use("/api/v1/jobs", jobsRoute);
 
 
 //initialization
