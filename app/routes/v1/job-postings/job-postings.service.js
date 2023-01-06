@@ -1,4 +1,4 @@
-import model from "./sample.model.js";
+import model from "./job-postings.model.js";
 
 const getAll = async () => {
   return await model.find({ deleted: false });
